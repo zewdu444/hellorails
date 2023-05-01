@@ -1,0 +1,23 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: hellrails
+  pool: 5
+  host: localhost
+  username: postgres
+  password: pass1wd
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: hellrails_test
+  pool: 5
+  username: postgres
+  password: pass1wd
+
+staging:
+  url: <%= ENV['DATABASE_URL'] %>
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
